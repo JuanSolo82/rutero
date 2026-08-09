@@ -6,4 +6,8 @@
     /* The background property is added to clearly distinguish the borders between drawer and main
        content */
     background: #eee;
-  }
+}
+
+.sidenav-container {
+	height: 100vh;
+}

@@ -30,10 +30,10 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --base-href=/NOMBRE-DEL-REPO/
+        run: npm run build -- --base-href=/rutero/
 
       - name: Copy index.html as 404.html (SPA routing fix)
-        run: cp dist/*/browser/index.html dist/*/browser/404.html
+        run: cp dist/rutero/browser/index.html dist/rutero/browser/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -41,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/NOMBRE-DE-TU-APP/browser'
+          path: 'dist/rutero/browser'
 
   deploy:
     environment:

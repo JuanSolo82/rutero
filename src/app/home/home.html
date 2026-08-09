@@ -1,4 +1,24 @@
-<mat-sidenav-container class="example-container">
-    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
-    <mat-sidenav-content>Main content</mat-sidenav-content>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav opened mode="side"
+        [style.width.px]="200"
+        [style.background]="'#eee'">
+        
+        <mat-nav-list>
+            <a mat-list-item routerLink="/home/info">
+                <mat-icon>inbox</mat-icon>
+                Info
+            </a>
+            <a mat-list-item routerLink="/home/instrumentos">
+                <mat-icon>outbox</mat-icon>
+                Instrumentos
+            </a>
+            <a mat-list-item routerLink="/home/header">
+                <mat-icon>drafts</mat-icon>
+                Header
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
 </mat-sidenav-container>

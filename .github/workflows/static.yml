@@ -30,7 +30,10 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build -- --base-href=/rutero/
+        run: npx ng build --configuration github-pages --base-href=/rutero/
+
+      - name: List browser folder contents
+        run: find dist/rutero/browser -maxdepth 3
 
       - name: Copy index.html as 404.html (SPA routing fix)
         run: cp dist/rutero/browser/index.html dist/rutero/browser/404.html

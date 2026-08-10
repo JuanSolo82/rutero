@@ -3,6 +3,7 @@ import { Home } from './home/home';
 import { Info } from './paginas/info/info';
 import { Instrumentos } from './paginas/instrumentos/instrumentos';
 import { Header } from './paginas/header/header';
+import { Error } from './error/error';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,5 +12,6 @@ export const routes: Routes = [
         { path: 'instrumentos', component: Instrumentos },
         { path: 'header', component: Header }
     ]},
-    { path: '**', redirectTo: 'home' }
+    { path: 'error', component: Error },
+    { path: '**', redirectTo: 'error' }
 ];
